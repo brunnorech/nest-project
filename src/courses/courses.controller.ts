@@ -23,7 +23,7 @@ export class CoursesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.coursesService.findOne(id);
+    return this.coursesService.findOne(+id);
   }
 
   @Post()
@@ -38,6 +38,6 @@ export class CoursesController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.coursesService.remove(id);
+    return this.coursesService.remove(+id);
   }
 }
